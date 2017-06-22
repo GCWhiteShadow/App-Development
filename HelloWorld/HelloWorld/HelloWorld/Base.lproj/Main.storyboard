@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,30 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icl-Ap-uEm">
-                                <rect key="frame" x="16" y="197" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="10" maxValue="42" translatesAutoresizingMaskIntoConstraints="NO" id="wvM-SL-ABF">
-                                <rect key="frame" x="53" y="327" width="268" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="nameSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="o0n-4M-Y79"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="760-eX-iCU">
-                                <rect key="frame" x="161" y="372" width="52" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="760-eX-iCU">
+                                <rect key="frame" x="172" y="375.5" width="31" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QjO-R3-YNK">
-                                <rect key="frame" x="152" y="257" width="71" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3TP-UI-l7I">
+                                <rect key="frame" x="163" y="427" width="51" height="31"/>
+                                <connections>
+                                    <action selector="themeSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="9vf-os-J7h"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QjO-R3-YNK">
+                                <rect key="frame" x="153" y="261" width="69" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="6Dc-f5-QAc"/>
+                                    <constraint firstAttribute="height" constant="28" id="Fef-W7-O0G"/>
+                                </constraints>
                                 <segments>
                                     <segment title="1"/>
                                     <segment title="2"/>
@@ -53,15 +48,33 @@
                                     <action selector="nameSegmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="FWG-dG-NfU"/>
                                 </connections>
                             </segmentedControl>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3TP-UI-l7I">
-                                <rect key="frame" x="163" y="427" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icl-Ap-uEm">
+                                <rect key="frame" x="111" y="187" width="153" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="10" maxValue="42" translatesAutoresizingMaskIntoConstraints="NO" id="wvM-SL-ABF">
+                                <rect key="frame" x="52" y="318.5" width="271" height="31"/>
                                 <connections>
-                                    <action selector="themeSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="9vf-os-J7h"/>
+                                    <action selector="nameSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="o0n-4M-Y79"/>
                                 </connections>
-                            </switch>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wvM-SL-ABF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="0SY-Wc-rIO"/>
+                            <constraint firstItem="wvM-SL-ABF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4lZ-Co-MKh"/>
+                            <constraint firstItem="icl-Ap-uEm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8HD-li-M83"/>
+                            <constraint firstItem="760-eX-iCU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="57" id="Czk-fn-gEa"/>
+                            <constraint firstItem="760-eX-iCU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M6i-cQ-bYf"/>
+                            <constraint firstItem="QjO-R3-YNK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-58.5" id="TMG-bj-W6a"/>
+                            <constraint firstItem="QjO-R3-YNK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZFJ-3j-3gW"/>
+                            <constraint firstItem="wvM-SL-ABF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fjz-rX-ZLk"/>
+                            <constraint firstItem="3TP-UI-l7I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="109" id="gid-60-eIr"/>
+                            <constraint firstItem="icl-Ap-uEm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-128.5" id="gpR-SU-BI9"/>
+                            <constraint firstItem="3TP-UI-l7I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xIY-yF-KaH"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="fontSizeLabel" destination="760-eX-iCU" id="W2p-Eg-DgB"/>
